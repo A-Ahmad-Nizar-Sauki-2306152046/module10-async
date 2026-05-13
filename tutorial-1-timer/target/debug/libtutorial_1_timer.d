@@ -1,0 +1,1 @@
+C:\Kuliah\Semester\ 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-1-timer\target\debug\libtutorial_1_timer.rlib: C:\Kuliah\Semester\ 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-1-timer\src\lib.rs
