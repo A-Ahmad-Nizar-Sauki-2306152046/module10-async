@@ -243,3 +243,96 @@ warna tema dan menambahkan emoji agar lebih menarik dan personal.
 
 > <img width="2560" height="1424" alt="Image" src="https://github.com/user-attachments/assets/71f2626b-02a6-4d9d-9c78-40f6ee9ddfce" />
 > <img width="2560" height="1430" alt="Image" src="https://github.com/user-attachments/assets/1e75c795-6f2b-43c3-a327-2952f3fcd359" />
+
+# Bonus: Rust Websocket Server for YewChat!
+
+## Deskripsi
+Pada bagian bonus ini, saya mengganti WebSocket server JavaScript (TypeScript) 
+dari Tutorial 3 dengan server Rust yang dimodifikasi dari Tutorial 2. 
+Tantangannya adalah menyesuaikan format komunikasi karena YewChat menggunakan 
+JSON, sedangkan server Tutorial 2 awalnya hanya mengirim plain text.
+
+## Perbedaan Format Pesan
+
+### Tutorial 2 (plain text)
+misal:
+```
+hello
+hai kamu
+```
+
+### Tutorial 3 / YewChat (JSON)
+```json
+// Client → Server (register)
+{"messageType":"register","data":"Person 1"}
+
+// Client → Server (pesan)
+{"messageType":"message","data":"hello"}
+
+// Server → Client (daftar users)
+{"messageType":"users","dataArray":["Person 1","Person 2"]}
+
+// Server → Client (pesan broadcast)
+{"messageType":"message","data":"{\"from\":\"Person 1\",\"message\":\"hello\"}"}
+```
+
+Meskipun formatnya berbeda, keduanya tetap dikirim sebagai **satu text message** 
+melalui WebSocket. JSON hanya di-serialize menjadi string teks, sehingga 
+protokol WebSocket-nya tetap sama.
+
+## Perubahan pada Server Rust (Tutorial 2)
+
+Modifikasi dilakukan pada `src/bin/server.rs`:
+
+1. Menambahkan dependency `serde` dan `serde_json` untuk serialisasi JSON
+2. Menambahkan struct `IncomingMessage`, `OutgoingUsers`, `OutgoingMessage`, 
+   dan `MessageData` untuk parsing dan formatting pesan JSON
+3. Menambahkan `HashMap<SocketAddr, String>` untuk menyimpan daftar user 
+   yang terhubung beserta username-nya
+4. Menangani dua jenis pesan:
+   - `register` → simpan username, broadcast daftar user terbaru
+   - `message` → broadcast pesan beserta info pengirim
+5. Menghapus user dari daftar saat koneksi terputus dan broadcast ulang
+
+## Catatan Versi Rust
+
+Proyek ini menggunakan **dua versi Rust yang berbeda**:
+
+| Komponen | Versi Rust | Alasan |
+|----------|-----------|--------|
+| Server Rust (Tutorial 2) | stable (1.94.1) | Tidak ada constraint versi |
+| Frontend YewChat | 1.77.0 | `wasm-bindgen = "0.2.45"` tidak kompatibel dengan Rust > 1.77.0 |
+
+Cara berpindah versi:
+```bash
+# Untuk menjalankan server
+rustup default stable
+cargo run --bin server
+
+# Untuk menjalankan YewChat
+rustup default 1.77.0
+npm start
+```
+
+## Hasil Percobaan
+Seperti terlihat pada screenshot dan output terminal:
+- Server Rust berhasil menerima koneksi dari dua client
+- Pesan JSON berhasil di-parse dan di-broadcast dengan benar
+- YewChat menampilkan daftar user dan pesan secara real-time
+
+## Pendapat: JavaScript vs Rust
+
+**JavaScript (TypeScript)** lebih mudah untuk disetup dan dikembangkan 
+dengan cepat. Cocok untuk prototyping karena ekosistem npm yang lengkap 
+dan sintaks yang lebih familiar.
+
+**Rust** lebih unggul dalam hal performa dan keamanan memori. Server Rust 
+tidak membutuhkan garbage collector dan lebih efisien dalam menangani 
+banyak koneksi bersamaan. Namun setup-nya lebih kompleks, terutama 
+karena masalah kompatibilitas versi seperti yang dialami di tutorial ini.
+
+Untuk production dengan beban tinggi, saya lebih memilih **Rust**. 
+Namun untuk pengembangan cepat, **JavaScript/TypeScript** tetap lebih praktis.
+
+> <img width="2560" height="1424" alt="Image" src="https://github.com/user-attachments/assets/17eec17d-4c65-48aa-99a5-b137a115f8f6" />
+> <img width="2560" height="1426" alt="Image" src="https://github.com/user-attachments/assets/43b0755b-36a8-4dbd-90a1-4ecffedfca13" />

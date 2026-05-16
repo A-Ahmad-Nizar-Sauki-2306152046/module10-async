@@ -1,2 +1,324 @@
     Blocking waiting for file lock on package cache
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.17s
+   0.277545800s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="client"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: false }/TargetInner { name: "client", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\bin\\client.rs", Edition2024) }
+   0.278751800s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="client"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-8dab567c5bf98808\bin-client`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.333471000s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\4hmad\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\src\\lib.rs", Edition2021) }
+   0.335121600s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\serde-9ffe07fd5e3e9608\lib-serde`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.341115300s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "C:\\Users\\4hmad\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\src\\lib.rs", Edition2021) }
+   0.341176100s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\serde_core-2028d3412432f3f9\lib-serde_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.347887400s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.149/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "C:\\Users\\4hmad\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.149\\src\\lib.rs", Edition2021) }
+   0.347949100s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\serde_json-5e15ddbc29e6296c\lib-serde_json`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.349930200s  INFO prepare_target{force=false package_id=memchr v2.8.0 target="memchr"}: cargo::core::compiler::fingerprint: fingerprint error for memchr v2.8.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("memchr", ["lib"], "C:\\Users\\4hmad\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.8.0\\src\\lib.rs", Edition2021) }
+   0.350001200s  INFO prepare_target{force=false package_id=memchr v2.8.0 target="memchr"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\memchr-ca5486d432025975\lib-memchr`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.356545000s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint error for zmij v1.0.21/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "C:\\Users\\4hmad\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zmij-1.0.21\\src\\lib.rs", Edition2021) }
+   0.356598500s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\zmij-ff89e32e9f2c4004\lib-zmij`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.378414000s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="client"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: true }/TargetInner { name: "client", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\bin\\client.rs", Edition2024) }
+   0.378501400s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="client"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-cd335524619e067b\test-bin-client`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.380751400s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="server"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: false }/TargetInner { name: "server", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\bin\\server.rs", Edition2024) }
+   0.380822800s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="server"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-1436bde65c0333c6\bin-server`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.383890300s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="server"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: true }/TargetInner { name: "server", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\bin\\server.rs", Edition2024) }
+   0.383965100s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="server"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-3f0abc03b32e7428\test-bin-server`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.386260100s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="tutorial-2-broadcast"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: false }/TargetInner { name: "tutorial-2-broadcast", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\main.rs", Edition2024) }
+   0.386323700s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="tutorial-2-broadcast"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-4a41f405523a8ee6\bin-tutorial-2-broadcast`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.389469400s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="tutorial-2-broadcast"}: cargo::core::compiler::fingerprint: fingerprint error for tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)/Check { test: true }/TargetInner { name: "tutorial-2-broadcast", doc: true, ..: with_path("C:\\Kuliah\\Semester 6\\Adpro\\Tutorials\\Tutorial10\\module10-async\\tutorial-2-broadcast\\src\\main.rs", Edition2024) }
+   0.389550700s  INFO prepare_target{force=false package_id=tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast) target="tutorial-2-broadcast"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast\target\debug\.fingerprint\tutorial-2-broadcast-77216a09eb04c5ba\test-bin-tutorial-2-broadcast`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking memchr v2.8.0
+    Checking serde_core v1.0.228
+    Checking zmij v1.0.21
+    Checking serde v1.0.228
+    Checking serde_json v1.0.149
+    Checking tutorial-2-broadcast v0.1.0 (C:\Kuliah\Semester 6\Adpro\Tutorials\Tutorial10\module10-async\tutorial-2-broadcast)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.83s
