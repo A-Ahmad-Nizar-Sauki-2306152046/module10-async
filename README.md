@@ -123,3 +123,44 @@ Seperti terlihat pada screenshot:
 
 > <img width="2026" height="642" alt="Image" src="https://github.com/user-attachments/assets/7c959067-e8be-4410-93c3-6ad5650a8ac5" />
 
+## Experiment 2.3: Small Changes, Add IP and Port
+
+### Deskripsi
+Pada eksperimen ini, saya memodifikasi server agar setiap pesan yang 
+dibroadcast menyertakan informasi **IP dan Port** dari pengirimnya.
+Dengan begitu, setiap client bisa mengetahui dari mana asal pesan tersebut.
+
+### Perubahan yang Dilakukan
+
+#### `src/bin/server.rs`
+Pada fungsi `handle_connection`, pesan yang diterima dari client 
+sebelum dibroadcast dibungkus dengan format yang menyertakan alamat pengirim:
+
+```rust
+// Sebelum
+bcast_tx.send(text.into())?;
+
+// Sesudah
+let message_with_sender = format!("[{}]: {}", addr, text);
+bcast_tx.send(message_with_sender)?;
+```
+
+### Penjelasan
+Variabel `addr` bertipe `SocketAddr` sudah tersedia sebagai parameter 
+di fungsi `handle_connection`. Dengan menggunakan `format!()`, kita 
+sisipkan informasi IP dan Port pengirim ke dalam setiap pesan sebelum 
+disebarkan ke semua client. Hal ini berguna agar setiap client tahu 
+siapa yang mengirim pesan, meskipun belum ada sistem nama pengguna.
+
+### Hasil Percobaan
+Seperti terlihat pada screenshot:
+- Server menerima koneksi dari `127.0.0.1:52702` dan `127.0.0.1:52703`
+- Setiap pesan yang diterima client kini tampil dalam format `[IP:Port]: pesan`
+  - `[127.0.0.1:52702]: hello saya`
+  - `[127.0.0.1:52703]: hai kamu`
+  - `[127.0.0.1:52702]: test`
+  - `[127.0.0.1:52702]: client 1`
+  - `[127.0.0.1:52703]: client 2`
+- Semua client bisa melihat dari port mana setiap pesan berasal
+
+> <img width="2028" height="628" alt="Image" src="https://github.com/user-attachments/assets/cb2dfdae-b4f6-4f3b-bb57-2790283a3203" />
